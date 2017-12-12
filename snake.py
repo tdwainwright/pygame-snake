@@ -49,13 +49,18 @@ def get_direction(previous_direction, event_key):
     elif event_key == pygame.K_UP:
         return DIRECTION_UP
     return previous_direction
+    if event_key == pygame.K_RIGHT:
+        return DIRECTION_RIGHT
+    if event_key == pygame.K_DOWN:
+        return DIRECTION_DOWN
+    return previous_direction
 
 def create_food_position():
     """Returns a random 2-tuple in the grid where the food should be located.
     The first element is the x position. Must be an int between 0 and GRID_WIDTH - 1, inclusively.
     The second element is the y position. Must be an int between 0 and GRID_HEIGHT - 1, inclusively.
     """
-    return
+    
 
 def snake_ate_food(snake, food):
     """Returns whether food was eaten by the snake.
